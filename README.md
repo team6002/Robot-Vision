@@ -1,2 +1,2 @@
 # urban-octo-robot-vision
-http://docs.opencv.org/3.1.0/d5/de5/tutorial_py_setup_in_windows.html
+http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_setup_in_windows/py_setup_in_windows.html
