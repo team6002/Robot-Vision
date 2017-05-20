@@ -1,11 +1,20 @@
 import numpy as np
 import cv2
 
-img = cv2.imread('image.jpg',0)
-cv2.imshow('image',img)
-k = cv2.waitKey(0)
-if k == 27:         # wait for ESC key to exit
-    cv2.destroyAllWindows()
-elif k == ord('s'): # wait for 's' key to save and exit
-    cv2.imwrite('messigray.png',img)
-    cv2.destroyAllWindows()
+cap = cv2.VideoCapture(0)
+
+while(True):
+    #Capture frame-by-frame
+    ret, frame = cap.read()
+
+    #Our operation on the frame come here
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    #Display the resulting frame
+    cv2.imshow('frame',gray)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.rlease()
+cv2.destroyAllWindows()
+
