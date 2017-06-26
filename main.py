@@ -1,5 +1,11 @@
 import cv2
 
+# To use this with the robot we have one way communication. The first step would be to
+# Load the ip camera software(https://github.com/mishiki1002/Ip_Camera) onto a raspberry
+# And then from there pull the stream as long as were on the same network into our VideoCapture
+# After that we can process the image from there and put it into a json file. wich we can read
+# From the robot code running on our pc to determine the autonomous action.
+
 # HSV color thresholds for YELLOW
 THRESHOLD_LOW = (15, 210, 20);
 THRESHOLD_HIGH = (35, 255, 255);
