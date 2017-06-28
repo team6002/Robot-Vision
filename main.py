@@ -1,9 +1,9 @@
+import json
 import cv2
 
 # HSV color thresholds for YELLOW
 THRESHOLD_LOW = (15, 210, 20);
 THRESHOLD_HIGH = (35, 255, 255);
-
 # Webcam parameters (your desired resolution)
 CAMERA_WIDTH = 320
 CAMERA_HEIGHT = 240
@@ -64,6 +64,16 @@ while True:
     # Draw a green circle around the largest enclosed contour
     if center != None:
         cv2.circle(img, center, int(round(radius)), (0, 255, 0))
+
+    # Store Data
+    data = {
+        'Raidus' : radius,
+        'Center' : center
+    }
+
+    # Writing JSON data
+    with open('data.json', 'w') as f:
+         json.dump(data, f)
 
     # Show image windows
     cv2.imshow('webcam', img)
