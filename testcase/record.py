@@ -3,7 +3,7 @@ import time
 import cv2
 
 print("Writing Video")
-out = cv2.VideoWriter('output.avi', 0, 20.0, (640,480))
+out = cv2.VideoWriter('output.mkv', 0, 20.0, (640,480))
 
 time.sleep(20)
 
