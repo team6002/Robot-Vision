@@ -1,5 +1,4 @@
-
-rt json
+import json
 import cv2
 
 # HSV color thresholds for YELLOW
