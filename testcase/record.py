@@ -5,7 +5,7 @@ import cv2
 print("Writing Video")
 out = cv2.VideoWriter('output.avi', 0, 20.0, (640,480))
 
-time.sleep(10)
+time.sleep(20)
 
 print("Releasing Video")
 out.release()
