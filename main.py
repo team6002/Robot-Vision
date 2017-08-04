@@ -1,6 +1,6 @@
-import json
+
+rt json
 import cv2
-import time
 
 # HSV color thresholds for YELLOW
 THRESHOLD_LOW = (15, 210, 20);
@@ -19,10 +19,6 @@ cam = cv2.VideoCapture(0)
 # camWidth = cam.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
 # camHeight = cam.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
 cam.set(CAMERA_WIDTH, CAMERA_HEIGHT)
-
-print("Recording Video")
-out = cv2.VideoWriter('output.avi', -1, 20.0, (640,480))
-
 
 print("Camera initialized: (" + str(CAMERA_WIDTH) + ", " + str(CAMERA_HEIGHT) + ")")
 
@@ -81,10 +77,7 @@ while True:
          json.dump(data, f)
 
     # Show image windows
-    # cv2.imshow('webcam', img)
-    # cv2.imshow('binary', img_binary)
-    # cv2.imshow('contours', img_contours)
+    cv2.imshow('webcam', img)
+    cv2.imshow('binary', img_binary)
+    cv2.imshow('contours', img_contours)
     cv2.waitKey(1)
-print("Releasing Video")
-out.release()
-
