@@ -16,7 +16,11 @@ frame = cv2.flip(frame, -1)
 
 print("Writing")
 counter = 0
-while(counter < 50):
+
+# Note that with the timer sleeping for 1 second 50 counters is 2 seconds
+# So to up this if we were to get 1 minuet we would need 60 / 2 = x 
+# x * 50 wich would = 1,500
+while(counter < 100):
 	vout.write(frame) 
 	time.sleep(1)
 	counter = counter + 1
