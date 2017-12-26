@@ -77,6 +77,6 @@ while True:
 
     # Show image windows
     cv2.imshow('webcam', img)
-    cv2.imshow('binary', img_binary)
-    cv2.imshow('contours', img_contours)
+    # cv2.imshow('binary', img_binary)
+    # cv2.imshow('contours', img_contours)
     cv2.waitKey(1)
