@@ -4,6 +4,7 @@ import cv2
 # HSV color thresholds for YELLOW
 THRESHOLD_LOW = (15, 210, 20);
 THRESHOLD_HIGH = (35, 255, 255);
+
 # Webcam parameters (your desired resolution)
 CAMERA_WIDTH = 320
 CAMERA_HEIGHT = 240
